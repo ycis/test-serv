@@ -6,7 +6,9 @@ var PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
-
+app.get("/", function(req, res) {
+    res.send("Welcome to the Page!");
+  });
 app.get("/api/characters", function(req, res) {
   return res.json(characters);
 });
